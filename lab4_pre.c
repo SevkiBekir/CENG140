@@ -43,6 +43,11 @@ int main(int argc, char const *argv[])
   dummy = insert(dummy, 16);
   PrintPreorder(dummy);
   printf("\n");
+  TreeNode* dummy2 = NULL;
+  int a[10] = {2,1,3,10,15,24,23,7,5,8};
+  dummy2=build(a,10);
+  PrintPreorder(dummy2);
+  printf("\n");
   return 0;
 }
 
@@ -66,7 +71,7 @@ TreeNode* insert(TreeNode *root, int val)
 
     root->left=insert(root->left,val);
   }
-  else if ((root->val)<val)
+  else if ((root->val)<val) // RIGHT
   {
 
     root->right=insert(root->right,val);
@@ -74,4 +79,20 @@ TreeNode* insert(TreeNode *root, int val)
 
 
   return root;
+}
+
+
+TreeNode* build(int *array, int size)
+{
+  int i;
+  TreeNode * newItem;
+  newItem=NULL;
+  for (i=0;i<size; i++)
+  {
+    newItem=insert(newItem,array[i]);
+    /* code */
+  }
+
+  return newItem;
+
 }
