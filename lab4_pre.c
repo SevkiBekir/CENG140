@@ -84,6 +84,8 @@ TreeNode* insert(TreeNode *root, int val)
 
 TreeNode* build(int *array, int size)
 {
+  if(size==0)
+    return NULL;
   int i;
   TreeNode * newItem;
   newItem=NULL;
