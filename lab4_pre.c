@@ -1,5 +1,5 @@
 /*
-* Coded By Şevki Bekir
+* Coded By Sevki Bekir
 * Date: 24.05.2016
 ***********************************************
 */
@@ -42,6 +42,7 @@ void printPreorder(TreeNode *node)
 
 int main(int argc, char const *argv[])
 {
+  int a[10] = {2,1,3,10,15,24,23,7,5,8};
   TreeNode* dummy = NULL;
   TreeNode* dummy2 = NULL;
   dummy=insert(dummy, 10);
@@ -58,7 +59,7 @@ int main(int argc, char const *argv[])
   printf("%p %d\n", (void*)dummy, (dummy? dummy->val: 0));
 
 
-  int a[10] = {2,1,3,10,15,24,23,7,5,8};
+
   dummy2=build(a,10);
   printPreorder(dummy2);
   printf("\n");
